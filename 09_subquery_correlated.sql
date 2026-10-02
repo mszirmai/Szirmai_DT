@@ -1,0 +1,1 @@
+SELECT product_name, region, total_amount, (SELECT MIN(total_amount) FROM flourmills_sales fs2 WHERE fs2.region=fs1.region) AS region_min_amount FROM flourmills_sales fs1;
