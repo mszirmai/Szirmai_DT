@@ -1,0 +1,1 @@
+SELECT * FROM (SELECT product_category, SUM(total_amount) as total_sales FROM flourmills_sales GROUP BY product_category) AS newtable WHERE total_sales>50000000 ORDER BY total_sales DESC;
